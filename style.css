@@ -1,0 +1,135 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1em;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+}
+
+nav li {
+    margin-right: 20px;
+}
+
+nav a {
+    color: #333;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: #666;
+}
+
+ul {
+    list-style-type: none;
+    display: flex;
+    position: relative;
+    gap: 40px;
+}
+
+ul li {
+    width: 100px;
+    height: 100px;
+    background-color: #ffff;
+    box-shadow: 0 8px 25px #00000033;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    transition: .4s;
+}
+
+ul li:hover {
+    width: 180px;
+}
+
+ul li .icon {
+    color: #ccc;
+    font-size: 2.2em;
+    transition: .2s;
+
+}
+
+ul li .texto {
+    color: white;
+    font-size: 20px;
+    transform: scale(0);
+    transition: .2s;
+    transition-delay: .1s;
+
+}
+
+ul li span {
+    position: absolute;
+}
+
+ul li:hover .texto {
+    transform: scale(1);
+}
+
+ul li:hover .icon {
+    transform: scale(0);
+}
+
+ul li::before {
+    content: '';
+    position: absolute;
+    background-image: linear-gradient(45deg, var(--cor1), var(--cor2));
+    inset: 0;
+    opacity: 0;
+    border-radius: 60px;
+}
+
+ul li:hover::before {
+    opacity: 1;
+}
+
+span {
+    color: purple;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2em;
+}
+
+#visualizacao {
+    background-color: #f7f7f7;
+    padding: 1em;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#tabela-dados {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#tabela-dados th,
+#tabela-dados td {
+    border: 1px solid #ddd;
+    padding: 0.5em;
+    text-align: left;
+}
+
+button {
+    height: 5em;
+    width: auto;
+
+}
